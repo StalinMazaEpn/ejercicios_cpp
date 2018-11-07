@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -8,16 +9,31 @@ int main () {
     int num1 = 0;
     int num2 = 0;
     int opcion = 0;
+    char a = 0;
     
+    
+   
+  
+  char letra = 65 ;
+  int letra2 = 65 ;
+  
+  int ascii = 'a'  ;
+  
+  cout << letra <<endl;
+  cout << letra2 <<endl;
+ 
   
      
    do {     
+       
+       system("clear") ;
        
     cout << " Bienvenidos al Menu Stalin" <<endl;
     cout << "\t1 Suma de 2 Numeros" <<endl;
     cout << "\t2 Resta de 2 Numeros" <<endl;
     cout << "\t3 Producto de 2 Numeros " <<endl;
-    cout << "\t4 Salir " <<endl;
+    cout << "\t4 Abecedario " <<endl;
+    cout << "\t5 Salir " <<endl;
     cout << " Ingrese el Numero de la opcion que desea ejecutar" <<endl;
     
      cin >> valor;
@@ -63,7 +79,29 @@ int main () {
      
       break ;
       
+      case 4:
       
+      cout <<"Ingrese una Letra " <<endl;
+      cin>> a;
+      
+      if ( a == 'a' || a =='A' || a == 'e' || a == 'E'|| a == 'i' || a == 'I' || a == 'o' || a == 'O' || a == 'u' || a == 'U' ) {
+       
+       cout <<" Letra es una Vocal " << " Y Su Valor es "  << a <<endl; 
+         
+        
+      }
+      else { cout <<" Letra es Consonante " << " Y su Valor es : " << a <<endl; }
+      
+      
+      
+      break;
+      
+      
+      default: 
+      
+      cout << " Numero No Corresponde a Opciones del Sistema " <<endl;
+      
+      return 0;
       
     }
     
