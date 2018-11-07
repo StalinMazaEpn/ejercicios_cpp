@@ -1,54 +1,37 @@
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
 
 using namespace std;
-
-long int factorial( int );
-// utilizo long para almancenar valores grandes de numeros que solo el int no podria almacenar
-
-
-int main () {
+int num = 0;
+int dato =0;
+int fact =1;
+int x = 0;
+int dec = 0;
+int factorial(int){
+    if(num==0){
+        return 0;
+    }else{
+    x=x+1;
+    fact=fact*x;
+    num--;    
+    }
     
- 
-       int num = 0;
-       int fact = 0;
-   
-    
-    
-    cout <<"Ingrese un Numero" <<endl;
-    cin >> num;
-    
-    if (num < 0 ) {
-        
-        cout <<" No Existe factorial de numeros negativos " <<endl;
-        
-        } else {
-      
-     cout << " El Factorial de " << num << " es : " << factorial(num) <<endl;
-    
-                   }                            // realiza la llamada a la funcion para imprimirla
-    
-    return 0;
-    
+    factorial(num);
 }
 
-
-
-
-long int factorial( int num ) {
-    
-    if ( num == 0 || num == 1 ) { 
+int main(){
+    std::cout << "Factorial" << std::endl;
+    cin>>num;
+    dato=num;
+    if(num>=0){
+        if(num==0){
+            std::cout << "El factorial de 0 es 1" << std::endl;
+        }else{
+            factorial(num);
+        }
         
-        
-        return 1; // si el numero es igual a cero o uno, me imprime el valor de 1 porque 
-                  // el factorial de 0 y 1 es igual a 1
-        
-    } else {
-        
-        return num * factorial( num-1);
-        // sino el fibonacci es igual al numero * el numero menos 1 y se repite 
-        // el numero - 1 veces
+    }else{
+        std::cout << "No existe factorial de un numero negativo" << std::endl;
     }
-     
-    
+    std::cout << "El factorial de "<<dato<<" es: "<<fact << std::endl;
+    return 0;
 }

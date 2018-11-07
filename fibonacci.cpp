@@ -1,60 +1,37 @@
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
+#include<stdlib.h>
 
 using namespace std;
-
-long int fibonacci( int);
-
-
-int main ( ) {
-    
-    int num = 0;
-    int fibo = 0;
-    
-    
-  
-    
-    
-    cout <<"Ingrese un numero" <<endl;
-    cin >> num;
-    
-    
-    
-    
-    if ( num < 0 ) {
-        
-        cout << " No existe finobacci de numeros negativos " <<endl;
-    } else {
-        
-        
-    
-    cout <<" El Finobacci de " << num << " es : "  << fibonacci( num ) << endl;
-    
+int num = 0;
+int a=0;
+int b=1;
+int c=0;
+int fibonacci(int){
+   
+    if(num==0){
+        return  0;
+    }else{
+        /*c=a+b;
+        std::cout << a<<" " << b << " "<<c << endl;
+        a=b;
+        b=c;*/
+        c=a+b;
+        std::cout << c <<" " ;
+        a=b;
+        b=c;
+        num--;
     }
     
-    
-   
-   
-   
-    return 0;
+    fibonacci(num);
 }
 
 
-
-long int fibonacci ( int num ) {
+int main(){
+    std::cout << "Ingrese un numero: "<< std::endl;
+    cin>>num;
+    num=num-2;
+    std::cout << a << " "<<b<<" ";
+    fibonacci(num);
     
-   
-    
-     if ( num == 0  || num == 1 ) {
-        
-              return num;
-        
-    } else {
-        
-              return fibonacci(num-1) + fibonacci(num-2);
-    }
-    
-    
-    
-    
+    return 0;
 }

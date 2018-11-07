@@ -1,19 +1,21 @@
 #include <iostream> 
+#include <string.h>
 #include <stdlib.h> //librerias
 
 using namespace std;
 
-#define tam 4  // constante
-
+#define tam 10  // constante
+#define lim 50
 
 int suma_array(int arreglo[]);            
 float promedio_array(int arreglo[]);               //definiendo las funciones
 int menor_array(int arreglo []);
 int mayor_array(int arreglo []);
-
+bool palindromo(char palabra[]);
 
 int main () {   //funcion principal
     
+    char palabra[lim];
     int opcion = 0;
     int salida = 0;
     int numeros [tam];
@@ -48,9 +50,16 @@ int main () {   //funcion principal
         break;
         
         case 2:
+       
+       cout <<"Ingrese una palabra de maximo 50 caracteres" <<endl;
+        cin >> palabra;
+    
+    
+        if ( palindromo(palabra) == true) {  cout << "La Palabra " << palabra << " es Polindroma " <<endl;}
+        else {  cout << "La Palabra " << palabra << " No es Polindroma" <<endl;}
+       
         break;
-        cout <<"Ingrese una Palabra para verificar si es un palindromo" <<endl;
-        
+       
         default:
         cout <<"Numero no Corresponde a opciones del Programa" <<endl;
         opcion = 0;
@@ -129,4 +138,33 @@ int mayor_array(int arreglo []) {
     
    return aux2;
     
+}
+
+bool palindromo(char palabra[]){
+   
+      int tamanio;
+      bool valor ;
+      tamanio = strlen(palabra);
+     // cout << "la cantida de caracteres es :  "<< tamanio << endl;
+     
+      for (int i = 0; i < tamanio-2 ; i++ ) {
+        
+            tamanio--;
+      
+           //cout <<" valor de i" << i << "valor de tamanio "<<  tamanio <<endl; para ver que comparaciones esta haciendo
+        
+        if (palabra [i] == palabra [tamanio] ) {
+            
+            valor = true;
+            return true;
+                                                } 
+           
+         else { 
+                  valor = false;
+                  return false;
+                  
+               }
+        
+     }
+
 }
