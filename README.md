@@ -1,2 +1,3 @@
-# ejercicios_cpp
-Ejercicios realizados en C++
+# Ejercicios Realizados en C++
+
+Ejercicios realizados en C++ para prácticar el lenguaje C++
