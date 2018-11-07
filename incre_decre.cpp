@@ -3,22 +3,28 @@
 using namespace std;
 
 int main (){
-    int n = 0;
-    int a = 0;
-    int r = 0;
+   
     
-    while(n >= 0 && a >= 0 /*&& n<=9*/){
+    int num1 = 0;
+    int d = 0; 
+    int a = 0;
+  
+    
+    cout << " Ingrese Un Numero " <<endl;
+    cin >> num1;
+    
+ 
+  
+    while ( num1 > 0 && d <= num1  ) { 
+        cout << d <<endl; 
+        d++;
         
-        if( n >= 0 && n < 9 ){
-        
-        n++;
-        std::cout << n << std::endl;
-        
-            }else{
-                --n;
-                std::cout << n << std::endl;
-                
-            }
+      
     }
+   
     return 0;
 }
+
+
+
+// http://decsai.ugr.es/~jfv/ed1/c/cdrom/cap4/cap42.htm

@@ -21,7 +21,6 @@ int main () {
         else { cout << "Numero No Corresponde A un Dia de la Semana " <<endl;} 
         
     
-    
     return 0;
     
 }
