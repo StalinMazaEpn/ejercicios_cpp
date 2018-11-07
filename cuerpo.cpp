@@ -7,7 +7,7 @@ int main () {
     
     char menu ;
     int peso = 0; // variable donde ingresamos el peso
-    float vaso = 0.006; // equivalencia de un vaso de Whisky en Lt
+    float vaso = 0.0024; // equivalencia de un vaso de 250 ml de Whisky en Lt
     float sangre = 13; // divisor para obtener litros de sangre
     float tolerancia = 0; // es el 3% del valor maximo de alcohol
     float rangoM = 0; // rangomaximo que soporta su cuerpo con la tolerancia de 3%
@@ -21,8 +21,6 @@ int main () {
     cout <<" Aqui vamos a determinar su tolerancia al alcohol de acuerdo a su peso "<< endl;
     cout <<"Ingrese su Peso " <<endl;
     cin >> peso ;
-    
-    if ( peso > 0) { 
     
     sangre = (peso/sangre) ;
     //cout <<"Su cantidad de sangre es : " << sangre << "  litros"<<endl;
@@ -41,13 +39,13 @@ int main () {
        
    do { 
        
-       system("clear") ;
+     
        
         cout <<"Desea Ingerir un Vaso de Whisky" <<endl;
        cout <<"Escriba S si desea o N si no desea " <<endl;
        cin >>menu;
        
-     
+       system("clear") ;
        
        if ( menu == 'S' || menu == 's') { 
            
@@ -58,7 +56,7 @@ int main () {
        // cout << numvaso <<endl;
                                
      if ( vasoW >= rangoM ) {  menu = 'n' ; 
-                              cout <<" Usted esta intoxicado porque : " <<endl;
+                              cout <<" Usted ya no debe ingerir mas alcohol o ira directo al hospital" <<endl;
      }
      
      
@@ -67,10 +65,10 @@ int main () {
     
     
    } while ( menu == 's' || menu == 'S' ) ;
-     cout <<"Usted Ingirio " << numvaso <<" vasos de Whisky" <<endl;
-     cout <<"con " << vasoW <<" litros de alcohol en sangre" <<endl;
+     cout <<"Usted Bebio :" << vasoW <<" litros de Whisky" <<endl;
+     cout <<"Y el total de Vasos que tomo fue de:" << numvaso <<" vasos" <<endl;
 
-} else { cout <<"Valor No Valido" <<endl; }
+
 
      return 0;
 }
